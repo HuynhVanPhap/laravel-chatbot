@@ -6,20 +6,20 @@ use App\Repositories\TodoRepository;
 use App\Repositories\TodoRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+class RepositoryServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * Register services.
      *
      * @return void
      */
     public function register()
     {
-
+        $this->app->bind(TodoRepositoryInterface::class, TodoRepository::class);
     }
 
     /**
-     * Bootstrap any application services.
+     * Bootstrap services.
      *
      * @return void
      */

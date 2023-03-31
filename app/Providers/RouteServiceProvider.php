@@ -47,8 +47,19 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
         });
+
+        $this->mapBotManCommands();
     }
 
+    /**
+     * Defines the BotMan "hears" commands.
+     *
+     * @return void
+     */
+    protected function mapBotManCommands()
+    {
+        require base_path('routes/botman.php');
+    }
     /**
      * Configure the rate limiters for the application.
      *

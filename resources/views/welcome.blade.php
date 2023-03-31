@@ -12,7 +12,9 @@
     <script>
         var botmanWidget = {
             aboutText: 'huynhvanphap198@gmail.com',
-            introMessage: 'Chào mừng đến với Bình Nguyên Vô Tận !'
+            introMessage: 'Chào mừng đến với Bình Nguyên Vô Tận !',
+            title: 'Chatbot',
+            mainColor: '#00E5E5',
         };
     </script>
     <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
