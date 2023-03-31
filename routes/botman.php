@@ -8,10 +8,10 @@ use BotMan\BotMan\Messages\Incoming\Answer;
 $botman = resolve('botman');
 
 $botman->hears('hi', function($bot) {
-    $bot->ask("Hello ! What your name ?", function (Answer $answer) {
+    $bot->ask("Xin chào, bạn tên gì ? ?", function (Answer $answer, $bot) {
         $name = $answer->getText();
 
-        $this->say("Nice to meet you ".$name);
+        $bot->say($name."Rất vui được biết bạn, đó là một cái tên đẹp");
     });
 });
 
